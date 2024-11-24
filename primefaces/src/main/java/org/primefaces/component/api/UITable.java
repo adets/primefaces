@@ -214,11 +214,6 @@ public interface UITable<T extends UITableState> extends ColumnAware, MultiViewS
                 }
             }
 
-            if (filterValue != null) {
-                // this is not absolutely necessary, but in case the result is null, it prevents to execution of the next statement
-                filterValue = FilterMeta.resetToNullIfEmpty(filterValue);
-            }
-
             if (filterValue != null && filterValue.getClass().isArray()) {
                 ValueExpression columnFilterValueVE = column.getValueExpression(ColumnBase.PropertyKeys.filterValue.toString());
                 if (columnFilterValueVE != null && List.class.isAssignableFrom(columnFilterValueVE.getType(context.getELContext()))) {
