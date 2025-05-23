@@ -81,12 +81,14 @@
 
     <distributionManagement>
         <repository>
-            <id>releases</id>
-            <url>file:///C:/Users/Alexey/Documents/Repository/Releases</url>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/${env.GITHUB_REPOSITORY}</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <url>file:///C:/Users/Alexey/Documents/Repository/Snapshots</url>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/${env.GITHUB_REPOSITORY}</url>
         </snapshotRepository>
     </distributionManagement>
 
